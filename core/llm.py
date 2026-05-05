@@ -17,6 +17,9 @@ llm = Llama(
 
 
 def generate_answer(query, context):
+    # 🔥 LIMIT CONTEXT (VERY IMPORTANT)
+    context = context[:2000]
+
     prompt = f"""[INST]
 You are an expert AI assistant.
 
